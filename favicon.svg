@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Digital Khan">
+  <rect width="64" height="64" rx="8" fill="#111113"/>
+  <text x="22" y="43" font-family="DejaVu Sans Mono, monospace" font-size="34" font-weight="700" fill="#FAFAF8">k</text>
+  <rect x="42" y="26" width="10" height="18" fill="#27496D"/>
+</svg>

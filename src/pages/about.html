@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+{{JSONLD}}
+</head>
+<body data-page="about">
+{{> header }}
+
+<main id="main">
+  <section class="container py-8 md:py-12">
+    <p class="eyebrow mb-2">About</p>
+    <h1 class="text-40 md:text-56 font-semibold tracking-tight">
+      Software Developer &amp; Product Builder.
+    </h1>
+    <div class="mt-4 max-w-2xl">
+      <p class="text-20 text-ink">
+        I build software because I keep running into the same problem:
+        most tools and starter setups are either too heavy for the job or
+        too thin to ship with. I'd rather make the thing once, properly,
+        and reuse it.
+      </p>
+      <p class="mt-3 text-16 text-muted">
+        Digital Khan is where I publish that work — small products,
+        technical writing, and the occasional project. Everything here is
+        mine: the code, the copy, the mistakes, and the maintainership.
+      </p>
+    </div>
+  </section>
+
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">01</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">How I Work</span>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="border-t border-line pt-3">
+        <h2 class="font-mono text-14 uppercase tracking-wide text-muted">Practical software</h2>
+        <p class="mt-2 text-16 text-ink">
+          Working software beats impressive architecture. If a feature
+          doesn't move a real problem forward, it doesn't ship.
+        </p>
+      </div>
+      <div class="border-t border-line pt-3">
+        <h2 class="font-mono text-14 uppercase tracking-wide text-muted">Real problems</h2>
+        <p class="mt-2 text-16 text-ink">
+          I build for the day-to-day work I actually do — installing,
+          deploying, administering, maintaining. Not for a hypothetical
+          enterprise.
+        </p>
+      </div>
+      <div class="border-t border-line pt-3">
+        <h2 class="font-mono text-14 uppercase tracking-wide text-muted">Reusable systems</h2>
+        <p class="mt-2 text-16 text-ink">
+          The most valuable code is the kind you can use on the next
+          project. That's why I productize the foundation once and reuse
+          it everywhere.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">02</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">A note on this site</span>
+    </div>
+    <div class="max-w-2xl">
+      <p class="text-16 text-muted">
+        You won't find invented client lists, years of experience, or
+        fabricated metrics here. If you want to know what I can do, look
+        at the products and the code — they're the honest record.
+      </p>
+    </div>
+  </section>
+
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">03</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Now What</span>
+    </div>
+    <div>
+      <a class="link-row" href="@root/products/">
+        <span class="row-title">See my software</span>
+        <span class="row-desc">Products I build and maintain.</span>
+      </a>
+      <a class="link-row" href="@root/projects/">
+        <span class="row-title">Browse projects</span>
+        <span class="row-desc">Selected work, as it ships.</span>
+      </a>
+      <a class="link-row" href="@root/articles/">
+        <span class="row-title">Read my writing</span>
+        <span class="row-desc">Technical articles on Laravel and tooling.</span>
+      </a>
+      <a class="link-row" href="@root/contact/">
+        <span class="row-title">Get in touch</span>
+        <span class="row-desc">Email or GitHub — whatever works.</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+</body>
+</html>

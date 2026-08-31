@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+{{JSONLD}}
+</head>
+<body data-page="contact">
+{{> header }}
+
+<main id="main">
+  <section class="container py-8 md:py-12">
+    <p class="eyebrow mb-2">Contact</p>
+    <h1 class="text-40 md:text-56 font-semibold tracking-tight">Contact.</h1>
+    <p class="mt-3 max-w-2xl text-16 text-muted">
+      The fastest way to reach me. No contact form — email is best, and
+      GitHub is where the code lives.
+    </p>
+
+    <div class="mt-6 max-w-2xl">
+      {{CONTACT_ROWS}}
+    </div>
+  </section>
+
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">01</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">What I respond to</span>
+    </div>
+    <ul class="max-w-2xl font-mono text-14 text-ink">
+      <li class="border-b border-line py-2">Questions about my products — before or after purchase.</li>
+      <li class="border-b border-line py-2">Bug reports with a way to reproduce them.</li>
+      <li class="border-b border-line py-2">Serious project collaboration — not cold agency pitches.</li>
+    </ul>
+  </section>
+
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">02</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Verification note</span>
+    </div>
+    <p class="max-w-2xl text-16 text-muted">
+      Only verified contact channels are listed here. When a social
+      profile is real and confirmed, it gets added — never before.
+    </p>
+  </section>
+</main>
+
+{{> footer }}
+</body>
+</html>

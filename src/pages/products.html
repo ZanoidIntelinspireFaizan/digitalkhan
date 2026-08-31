@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+{{JSONLD}}
+</head>
+<body data-page="products">
+{{> header }}
+
+<main id="main">
+  <section class="container py-8 md:py-12">
+    <p class="eyebrow mb-2">Products</p>
+    <h1 class="text-40 md:text-56 font-semibold tracking-tight">Software Products.</h1>
+    <p class="mt-3 max-w-2xl text-16 text-muted">
+      Everything below is built and maintained by me, and sold directly.
+      No resellers, no subscriptions you didn't ask for, no features that
+      don't exist yet.
+    </p>
+
+    <div class="mt-6">
+      {{PRODUCTS_LIST}}
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+</body>
+</html>

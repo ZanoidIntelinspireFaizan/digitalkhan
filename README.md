@@ -108,3 +108,87 @@ Built so `/products/[future-product]/` can be added via data only — no homepag
 - Would this be mistaken for a generic AI-generated template in the first few seconds?
 
 Deliver the complete working project (real HTML pages, Tailwind build, JS, data/config files, JSON-LD, robots.txt, sitemap.xml, manifest, favicon concept, GitHub Actions workflow, README) — not a mockup, not snippets, not a design description.
+
+---
+
+## 7. Development & Deployment
+
+### Requirements
+- Node.js 20+ (22 recommended)
+- ImageMagick (`convert`) for favicon / OG images
+- npm
+
+### Local development
+
+```bash
+npm install          # installs tailwindcss + self-hosted font packages
+npm run build        # builds CSS, images, fonts and assembles dist/
+npm run serve        # serves dist/ at http://localhost:4173
+```
+
+Watch mode for CSS (rebuilds `assets/css/main.css` on change):
+
+```bash
+npm run build:css:watch
+```
+
+### Site structure
+
+```
+├── src/
+│   ├── pages/        one template per route (home, about, products, …)
+│   ├── partials/     shared head / header / footer
+│   └── styles/       Tailwind input.css (design tokens live in tailwind.config.js)
+├── data/
+│   ├── config.js     SITE_URL, Gumroad URL, demo URL, contact, price
+│   ├── products.js   product catalog → /products/ listing
+│   ├── content.js    FAQ text, projects & articles lists (editable)
+│   └── seo.js        per-page titles, descriptions, canonical paths
+├── assets/
+│   ├── css/          compiled Tailwind output
+│   ├── js/           vanilla JS (menu, FAQ accordion, demo-URL check)
+│   ├── fonts/        self-hosted woff2 (generated)
+│   └── images/       favicon + OG images (generated)
+├── scripts/
+│   ├── build.mjs     page assembly, JSON-LD, sitemap, static copy
+│   ├── copy-fonts.mjs
+│   └── generate-images.mjs
+└── .github/workflows/deploy.yml   → GitHub Pages
+```
+
+### Editing config values
+
+All site-critical values live in `data/config.js`:
+
+| Key | Purpose |
+|---|---|
+| `SITE_URL` | Canonical origin (change when moving to a custom domain) |
+| `GUMROAD_LAUNCH_KIT_URL` | Launch Kit checkout link |
+| `LAUNCH_KIT_DEMO_URL` | Set to a real URL to enable the demo CTA; empty = disabled |
+| `CONTACT_EMAIL` / `GITHUB_URL` | Contact page rows; empty = honest "pending" state |
+| `PRICE` | Shown in pricing section; empty = deferred to Gumroad |
+| `PRODUCT_STATUS` | Badge on the product hero |
+
+Adding a product = add one object to `data/products.js` (and a page under
+`src/pages/`). No nav or design changes required.
+
+### GitHub Pages deployment
+
+1. Push to `main` — `.github/workflows/deploy.yml` builds and deploys
+   automatically.
+2. In the repo: **Settings → Pages → Source: GitHub Actions**.
+3. The site is published under `https://<user>.github.io/<repo>/`. Links
+   are relative, so no rebuild is needed if the repo is renamed.
+
+### Custom domain
+
+1. Add a `CNAME` file (e.g. [`digitalkhan.dev`](http://digitalkhan.dev))
+   in the repo root — the build copies it into `dist/` automatically.
+2. Update `SITE_URL` in `data/config.js`, then rebuild and push.
+
+### No fake content policy
+
+Every claim on the site must be true. Values that are not yet known
+(demo URL, price, contact email, version support) render an honest
+"pending" state in production — placeholders are never displayed as
+real data.
