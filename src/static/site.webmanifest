@@ -1,0 +1,21 @@
+{
+  "name": "Digital Khan",
+  "short_name": "Digital Khan",
+  "description": "Software Developer & Product Builder — independent software products.",
+  "start_url": "{{BASE_PATH}}/",
+  "display": "standalone",
+  "background_color": "#111113",
+  "theme_color": "#111113",
+  "icons": [
+    {
+      "src": "{{BASE_PATH}}/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "{{BASE_PATH}}/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

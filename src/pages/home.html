@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+{{JSONLD}}
+</head>
+<body data-page="home">
+{{> header }}
+
+<main id="main">
+  <!-- Hero -->
+  <section class="container py-8 md:py-12">
+    <div class="grid gap-6 md:grid-cols-2 md:items-center">
+      <div>
+        <p class="eyebrow mb-2">Software Developer · Product Builder</p>
+        <h1 class="text-40 md:text-56 font-semibold tracking-tight">
+          I build software that solves real problems.
+        </h1>
+        <p class="mt-3 max-w-md text-20 text-muted">
+          I'm Digital Khan — an independent developer making small, focused
+          tools for developers. No agency, no bloat. Software that does its
+          job and stays out of the way.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <a class="btn btn-solid" href="@root/products/">Explore Products</a>
+          <a class="btn" href="@root/about/">About Me</a>
+        </div>
+      </div>
+
+      <div class="code-panel" aria-label="Project structure of this site">
+        <header>
+          <span class="filename">~/digitalkhan</span>
+          <span class="font-mono text-14 text-muted">static · no server</span>
+        </header>
+<pre><span class="k">$</span> tree -L 2 -I node_modules
+digitalkhan
+├── src
+│   ├── pages/            <span class="c"># one template per route</span>
+│   ├── partials/         <span class="c"># head, header, footer</span>
+│   └── styles/           <span class="c"># tailwind input.css</span>
+├── data
+│   ├── config.js         <span class="c"># URLs, price, contact</span>
+│   ├── products.js       <span class="c"># product catalog</span>
+│   ├── seo.js            <span class="c"># metadata + JSON-LD</span>
+│   └── content.js        <span class="c"># FAQ, lists (editable)</span>
+├── assets
+│   ├── css/  js/  fonts/  images/
+└── .github/workflows/deploy.yml
+
+<span class="c"># built with plain HTML + Tailwind.
+# shipped to GitHub Pages. no database. no tracking.</span>
+<span class="k">$</span> npm run build && git push
+<span class="cursor"></span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured product -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">01</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Featured Product</span>
+    </div>
+
+    <div class="border-l-2 border-accent pl-3">
+      <h2 class="text-28 font-semibold tracking-tight">Launch Kit for Laravel</h2>
+      <p class="mt-1 font-mono text-14 text-muted">Launch Real Projects. Not Boilerplate.</p>
+      <p class="mt-2 max-w-2xl text-16 text-muted">
+        A production-ready Laravel starting point — authentication, user
+        management, roles &amp; permissions, an admin dashboard, CMS basics
+        and the modules you rebuild on every project. Stop rebuilding the
+        foundation and start on the product.
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a class="btn" href="@root/products/launch-kit-for-laravel/">Explore Launch Kit</a>
+        <a class="btn" id="demo-cta-home" href="#" aria-disabled="true" data-demo-cta title="Demo will be enabled when a live URL is published">View Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site map -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">02</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">What's Here</span>
+    </div>
+
+    <div>
+      <a class="link-row" href="@root/products/">
+        <span class="row-title">Software Products</span>
+        <span class="row-desc">Introductions to everything I sell — with real capabilities, no invented claims.</span>
+      </a>
+      <a class="link-row" href="@root/projects/">
+        <span class="row-title">Projects</span>
+        <span class="row-desc">Selected work I've built. Appears as it ships — nothing fabricated.</span>
+      </a>
+      <a class="link-row" href="@root/articles/">
+        <span class="row-title">Articles</span>
+        <span class="row-desc">Technical writing on Laravel, PHP, architecture and tooling. (None published yet.)</span>
+      </a>
+      <a class="link-row" href="@root/contact/">
+        <span class="row-title">Contact</span>
+        <span class="row-desc">The fastest way to reach me — email, GitHub, and product channels.</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+</body>
+</html>

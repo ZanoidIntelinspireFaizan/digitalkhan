@@ -1,0 +1,11 @@
+node_modules/
+dist/
+
+# Generated at build time by scripts/generate-images.mjs / copy-fonts.mjs
+assets/fonts/
+assets/images/
+assets/css/main.css
+favicon-32.png
+apple-touch-icon.png
+
+.DS_Store

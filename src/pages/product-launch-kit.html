@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+{{JSONLD}}
+</head>
+<body data-page="product-launch-kit">
+{{> header }}
+
+<main id="main">
+  <!-- Hero -->
+  <section class="container py-8 md:py-12">
+    <p class="eyebrow mb-2 text-red-600">Product · {{PRODUCT_STATUS}}</p>
+    <div class="grid gap-6 md:grid-cols-2 md:items-start">
+      <div>
+        <h1 class="text-40 md:text-56 font-semibold tracking-tight">
+          Launch Real Projects. Not Boilerplate.
+        </h1>
+        <p class="mt-3 max-w-md text-20 text-muted">
+          Launch Kit for Laravel is a production-ready Laravel starter
+          kit — authentication, user management, roles &amp; permissions,
+          an admin dashboard, CMS basics and the modules every project
+          needs from day one.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <a class="btn btn-red" href="{{GUMROAD_URL}}" target="_blank" rel="noopener noreferrer">
+            Buy on Gumroad
+          </a>
+          <a class="btn" id="demo-cta-product" href="#" aria-disabled="true" data-demo-cta title="Demo will be enabled when a live URL is published">
+            View Demo
+          </a>
+        </div>
+        <p class="mt-3 font-mono text-14 text-muted">
+          {{PRICE_DISPLAY}} — checkout is handled by Gumroad, not this site.
+        </p>
+      </div>
+
+      <!-- Realistic Laravel admin UI preview (illustrative sample data) -->
+      <div class="admin-preview" aria-label="Illustrative preview of the Launch Kit admin dashboard">
+        <div class="chrome">
+          <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+          <span class="url">app.test/admin</span>
+        </div>
+        <div class="body">
+          <div class="sidebar">
+            <span class="block pb-2 font-mono text-14 text-paper">LK · admin</span>
+            <span class="nav-item active">Dashboard</span>
+            <span class="nav-item">Users</span>
+            <span class="nav-item">Roles</span>
+            <span class="nav-item">Content</span>
+            <span class="nav-item">Activity</span>
+            <span class="nav-item">Settings</span>
+          </div>
+          <div class="main">
+            <p class="pb-2 font-mono text-14 text-paper">Dashboard</p>
+            <div class="stat-row">
+              <div class="stat"><b>128</b><span>users</span></div>
+              <div class="stat"><b>4</b><span>active roles</span></div>
+              <div class="stat"><b>36</b><span>posts</span></div>
+            </div>
+            <table>
+              <thead>
+                <tr><th>User</th><th>Role</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="name">aarav.shah</td><td>admin</td><td><span class="badge text-red-500">active</span></td></tr>
+                <tr><td class="name">priya.verma</td><td>editor</td><td><span class="badge">active</span></td></tr>
+                <tr><td class="name">m.rao</td><td>author</td><td><span class="badge text-muted">invited</span></td></tr>
+              </tbody>
+            </table>
+            <p class="pt-3 font-mono text-[11px] text-muted">Illustrative UI — fictional sample data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">01</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">The Problem</span>
+    </div>
+    <div class="max-w-2xl">
+      <p class="text-16 text-muted">
+        Every real Laravel project starts with the same sequence:
+      </p>
+      <ol class="mt-3 space-y-2">
+        <li class="border-l-2 border-line pl-3 text-16 text-ink">Set up authentication, email verification, password resets.</li>
+        <li class="border-l-2 border-line pl-3 text-16 text-ink">Build user management and role/permission logic.</li>
+        <li class="border-l-2 border-line pl-3 text-16 text-ink">Wire up an admin area — dashboard, menus, settings.</li>
+        <li class="border-l-2 border-line pl-3 text-16 text-ink">Create CMS basics for content you'll edit later.</li>
+        <li class="border-l-2 border-line pl-3 text-16 text-ink">Write the same tests, policies and seeders again.</li>
+      </ol>
+      <p class="mt-4 text-16 text-muted">
+        Then, finally, you start on what the project is actually about.
+        Launch Kit for Laravel collapses that sequence into a single
+        starting point — the foundation is already built, tested and
+        ready to extend.
+      </p>
+    </div>
+  </section>
+
+  <!-- Value -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">02</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">What You Stop Rebuilding</span>
+    </div>
+    <ul class="grid gap-1 max-w-2xl font-mono text-14 text-ink">
+      <li class="border-b border-line py-2">auth &amp; email verification</li>
+      <li class="border-b border-line py-2">users &amp; profiles</li>
+      <li class="border-b border-line py-2">roles &amp; permissions</li>
+      <li class="border-b border-line py-2">admin dashboard shell</li>
+      <li class="border-b border-line py-2">settings &amp; activity log</li>
+      <li class="border-b border-line py-2">content management basics</li>
+      <li class="border-b border-line py-2">policies, seeders &amp; tests</li>
+    </ul>
+    <p class="mt-3 max-w-2xl text-14 text-muted">
+      No percentage claims, no "save X hours" math — the modules are the
+      value. You know what rebuilding them costs.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">03</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Features</span>
+    </div>
+    <dl class="grid gap-x-6 md:grid-cols-2">
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">Authentication</dt>
+        <dd class="mt-1 text-16 text-muted">Login, registration, email verification, password reset — wired and themed.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">User Management</dt>
+        <dd class="mt-1 text-16 text-muted">Users list, create/edit, profile fields, statuses and admin actions.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">Roles &amp; Permissions</dt>
+        <dd class="mt-1 text-16 text-muted">Role-based access with granular permissions, policies and guards.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">Admin Dashboard</dt>
+        <dd class="mt-1 text-16 text-muted">A clean admin shell — navigation, layout, sidebar, dashboard page.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">CMS Basics</dt>
+        <dd class="mt-1 text-16 text-muted">Reusable content models, admin CRUD, and a public rendering path.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">Common Modules</dt>
+        <dd class="mt-1 text-16 text-muted">Activity log, settings, media uploads — the chores, already done.</dd>
+      </div>
+      <div class="border-t border-line py-3">
+        <dt class="font-mono text-14 uppercase tracking-wide text-red-600">Developer Foundation</dt>
+        <dd class="mt-1 text-16 text-muted">Sensible folder structure, seeders, tests, formatting and tooling config.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- Architecture -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">04</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Architecture</span>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 md:items-start">
+      <div class="code-panel" aria-label="Illustrative Launch Kit directory structure">
+        <header>
+          <span class="filename">app/</span>
+          <span class="font-mono text-14 text-muted">illustrative</span>
+        </header>
+<pre>app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── Admin/          <span class="c"># dashboard, users, roles…</span>
+│   │   └── Auth/           <span class="c"># login, register, verify</span>
+│   ├── Middleware/
+│   │   └── EnsureUserIsAdmin.php
+│   └── Requests/           <span class="c"># validated, typed</span>
+├── Models/
+│   ├── User.php
+│   ├── Role.php
+│   ├── Permission.php
+│   └── Post.php            <span class="c"># CMS basics</span>
+├── Policies/               <span class="c"># <span class="r">RBAC</span> + ownership</span>
+├── Services/               <span class="c"># activity, settings</span>
+└── Filament/                <span class="c"># admin panel theme</span>
+<span class="cursor"></span></pre>
+      </div>
+      <div>
+        <h2 class="text-28 font-semibold tracking-tight">Built to extend, not to fight.</h2>
+        <p class="mt-2 text-16 text-muted">
+          The structure follows Laravel conventions your team already
+          knows. Modules are namespaced, requests are validated, and
+          authorization lives in policies — so adding a feature means
+          adding a file, not refactoring the foundation.
+        </p>
+        <p class="mt-3 text-16 text-muted">
+          The tree above is illustrative. The exact layout that ships with
+          the current release is documented with the source.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">05</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Screens</span>
+    </div>
+    <p class="max-w-2xl text-16 text-muted">
+      Static previews of the shipped UI. All data shown is fictional
+      sample data — screens are illustrative, not live.
+    </p>
+
+    <div class="mt-4 grid gap-4 md:grid-cols-2">
+      <figure class="admin-preview">
+        <div class="chrome">
+          <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+          <span class="url">app.test/admin/users</span>
+        </div>
+        <div class="p-3">
+          <table>
+            <thead><tr><th>User</th><th>Role</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="name">aarav.shah</td><td>admin</td><td><span class="badge text-red-500">active</span></td></tr>
+              <tr><td class="name">priya.verma</td><td>editor</td><td><span class="badge">active</span></td></tr>
+              <tr><td class="name">dev.singh</td><td>author</td><td><span class="badge text-muted">invited</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="border-t border-panelLine p-3 font-mono text-[11px] text-muted">User management — sample data.</figcaption>
+      </figure>
+
+      <figure class="admin-preview">
+        <div class="chrome">
+          <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+          <span class="url">app.test/admin/roles</span>
+        </div>
+        <div class="p-3">
+          <table>
+            <thead><tr><th>Role</th><th>Permissions</th><th>Users</th></tr></thead>
+            <tbody>
+              <tr><td class="name">admin</td><td>all</td><td>2</td></tr>
+              <tr><td class="name">editor</td><td>posts.* , users.view</td><td>5</td></tr>
+              <tr><td class="name">author</td><td>posts.own.*</td><td>11</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="border-t border-panelLine p-3 font-mono text-[11px] text-muted">Roles &amp; permissions — sample data.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">06</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Who It's For</span>
+    </div>
+    <ul class="grid gap-1 max-w-2xl font-mono text-14 text-ink">
+      <li class="border-b border-line py-2">Freelancers — ship client work without rebuilding auth.</li>
+      <li class="border-b border-line py-2">Agencies — one consistent foundation across projects.</li>
+      <li class="border-b border-line py-2">SaaS builders — start on the product, not the boilerplate.</li>
+      <li class="border-b border-line py-2">Startup teams — a real admin from the first sprint.</li>
+      <li class="border-b border-line py-2">Laravel developers — a foundation you can audit line by line.</li>
+    </ul>
+  </section>
+
+  <!-- Use cases -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">07</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Use Cases</span>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="border-t border-line pt-3">
+        <h3 class="font-mono text-14 uppercase tracking-wide text-red-600">Internal tools</h3>
+        <p class="mt-2 text-16 text-muted">Stand up a real back-office with users, roles and content — in a day, not a month.</p>
+      </div>
+      <div class="border-t border-line pt-3">
+        <h3 class="font-mono text-14 uppercase tracking-wide text-red-600">Client products</h3>
+        <p class="mt-2 text-16 text-muted">A base your client's team can administer themselves from the first delivery.</p>
+      </div>
+      <div class="border-t border-line pt-3">
+        <h3 class="font-mono text-14 uppercase tracking-wide text-red-600">SaaS &amp; MVPs</h3>
+        <p class="mt-2 text-16 text-muted">Spend sprint one on your differentiator. The boring 80% is already there.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">08</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Demo</span>
+    </div>
+    <div class="max-w-2xl">
+      <h2 class="text-28 font-semibold tracking-tight">See it running before you buy.</h2>
+      <p class="mt-2 text-16 text-muted" id="demo-note">
+        A live demo is being prepared. The link below unlocks as soon as
+        the preview URL is published — no placeholder links here.
+      </p>
+      <p class="mt-3">
+        <a class="btn" id="demo-cta" href="#" aria-disabled="true" data-demo-cta title="Demo will be enabled when a live URL is published">Open Live Demo</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">09</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">Pricing</span>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 md:items-start">
+      <div>
+        {{PRICE_BLOCK}}
+        <p class="mt-2 max-w-md text-16 text-muted">
+          One purchase, direct from me. Checkout is completed securely on
+          Gumroad — this site never processes a payment.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <a class="btn btn-red" href="{{GUMROAD_URL}}" target="_blank" rel="noopener noreferrer">
+            Buy Launch Kit for Laravel
+          </a>
+        </div>
+      </div>
+      <div class="empty-note">
+        <p class="font-mono text-14 text-ink">pricing note</p>
+        <p class="mt-1 text-16 text-muted">
+          Exact terms — update policy, version support, refunds — are
+          listed at checkout and will be documented here as they're
+          finalized. Nothing is stated here before it's true.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container py-6 md:py-8">
+    <div class="section-index mb-4">
+      <span class="num">10</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="label">FAQ</span>
+    </div>
+    <div class="max-w-2xl">
+      <h2 class="text-28 font-semibold tracking-tight">What is Launch Kit for Laravel?</h2>
+      <p class="mt-2 text-16 text-muted">
+        Launch Kit for Laravel is a production-ready Laravel starter kit.
+        It gives you the foundation most real projects need from day one —
+        authentication, user management, roles &amp; permissions, an admin
+        dashboard, CMS basics and common modules — so you start on the
+        actual product instead of rebuilding boilerplate. It is a starter
+        kit, not a SaaS and not a hosted service.
+      </p>
+
+      <div class="mt-4">
+        {{FAQ_LIST}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Back -->
+  <section class="container py-6">
+    <a class="font-mono text-14 text-muted hover:text-ink" href="@root/products/">← All products</a>
+  </section>
+</main>
+
+{{> footer }}
+</body>
+</html>
